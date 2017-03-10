@@ -53,7 +53,7 @@ delete() {
 	i=0
 	upper=1
 	lower=1
-	while (($i<=$ether_num))
+	while (($i<$ether_num))
 	do
 		echo "$i"
 		mask=255.255.0.0
@@ -79,7 +79,7 @@ delete() {
 [[ $1 == '-del' ]] && {
 	i=0
 	echo "deleting"
-	while (($i <= $ether_num))
+	while (($i < $ether_num))
 	do
 		delete $ether_name$i
 		#tunctl -d $ether_name$i
